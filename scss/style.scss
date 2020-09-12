@@ -1,0 +1,490 @@
+/*Обнуление стилей*/
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+}
+img{
+    max-width: 100%;
+    outline: none;
+}
+*{padding: 0;margin: 0;border: 0;}
+button{cursor: pointer;}
+a,a:visited{text-decoration: none; outline: none;}
+a:hover{text-decoration: none;}
+ul li{list-style: none;}
+body{font-size:16px; font-family: 'Philosopher', sans-serif; font-weight: 700;}
+/*********************************/
+/*Контейнер*/
+.container{
+    max-width: 1220px;
+    margin: 0 auto;
+    padding: 0 10px;
+
+}
+/*Переменные*/
+
+/*****************************/
+
+/*Наследование    */
+%flex-column{
+  display: flex;
+  flex-direction: column;
+}
+
+%flex-menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+/***************************/
+/*Подключаем шрифты*/
+.title{
+    font-size: 30px;
+    color: #566366;
+    margin-bottom: 40px;
+    line-height: 0.8;
+    font-family: 'Oswald', sans-serif;
+}
+
+.header{
+    margin-bottom: 50px;
+    &__intro{
+    background-image: url(../img/header__bg1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    background-position: top;
+    z-index: 100;
+    position: relative;
+    }
+    &__inner{
+        text-align: center;
+        top: 35%;
+        left: 25%;
+        margin: 0 auto;
+        position: absolute;
+    }
+    &__title{
+        font-size: 26px;
+        border-top: 2px solid #F3F0F0;
+        border-bottom: 2px solid #F3F0F0;
+        margin-bottom: 30px;
+        text-transform: uppercase;
+        color: #F3F0F0;
+        font-family: 'Oswald', sans-serif;
+    }
+    &__btn{
+        border: 2px solid #E1DEDE;
+        padding: 14px 37px;
+        display: inline-block;
+        color: #E1DEDE;
+        font-size: 18px;
+        font-family: 'Alice', serif;
+        &:hover{
+            border: 2px solid #9A9A9A;
+            color: #9A9A9A;
+        }
+    }
+}
+.navbar{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 150;
+    margin-bottom: 40px;
+    background-color: #1E1F1A;
+    &:before{
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #1E1F1A;
+        z-index: 2;
+    }
+    &__body{
+        position: relative;
+        @extend %flex-menu;
+        height: 70px;
+    }
+    &__logo img{
+        height: 75px;
+        position: relative;
+        z-index: 3;
+    }
+    &__burger{
+        display: none;
+    }
+    &__list{
+        display: flex;
+        position: relative;
+        z-index: 2;
+    }
+    &__list li{
+        margin-left: 20px;
+    }
+    &__link{
+        text-transform: uppercase;
+        color: #fff;
+        font-size: 14px;
+        &:hover{
+            color: #B5DAD2;
+            transition: all .5s;
+        }
+    }
+}
+
+.Hobbies{
+    margin-bottom: 96px;
+    padding-top: 75px;
+    margin-top: -75px;
+    background-clip: content-box;
+    &__inner{
+        display: flex;
+        justify-content: space-between;
+
+    }
+    &__colums{
+        max-width: 358px;
+        padding: 0 15px;
+    }
+    &__text{
+        font-size: 16px;
+        color: #919191;
+        line-height: 1.2;
+        max-height: 170px;
+        overflow: auto;
+    }
+}
+
+.about{
+    margin-bottom: 60px;
+    background-color: #f2f2f1;
+    padding-top: 75px;
+    margin-top: -75px;
+    background-clip: content-box;
+    &__inner{
+        display: flex;
+        justify-content: space-between;
+    }
+    &__photo{
+        max-width: 404px;
+        overflow: hidden;
+    }
+    &__item{
+        max-width: 647px;
+        margin: 0 40px;
+        position: relative;
+    }
+    &__title{
+        margin-top: 40px;
+    }
+    &__text{
+        font-size: 18px;
+        line-height: 1.2;
+        color: #919191;
+        max-height: 190px;
+        overflow: auto;
+        & p{
+            text-indent: 15px;
+        }
+        &:before{
+            content: "";
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            top: 0;
+        }
+    }
+}
+
+.skills{
+    margin-bottom: 80px;
+    padding-top: 75px;
+    margin-top: -75px;
+    background-clip: content-box;
+    &__inner{
+        display: flex;
+        justify-content: space-between;
+    }
+    &__item{
+        margin-left: 50px;
+        max-width: 700px;
+    }
+    .skills__title{
+        margin-bottom: 25px;
+    }
+    &__text{
+        color: #474747;
+        font-size: 18px;
+        padding-right: 60px;
+        margin-bottom: 30px;
+        font-family: 'Philosopher', sans-serif;
+        & span{
+            display: block;
+            color: #919191;
+            padding-left: 10px;
+        }
+        & p:last-child{
+             max-width: 450px;
+             line-height: 1.4;
+        }
+    }
+    &__btn a{
+         padding: 14px 30px;
+         border: solid 2px #2ecc71;
+         display: inline-block;
+         color: #2ecc71;
+         font-family: 'Alice', serif;
+    }
+    &__img{
+        width: 100%;
+        max-height: 400px;
+        overflow: hidden;
+        border-radius: 5px;
+        margin-top: 20px;
+    }
+}
+
+.resume{
+    background-image: url(../img/resume__bg.png);
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: cover;
+    padding-top: 75px;
+    margin-top: -75px;
+    background-clip: content-box;
+    &__inner{
+        text-align: center;
+        padding-top: 50px;
+        max-width: 700px;
+        margin: 0 auto;
+        height: 300px;
+        margin-bottom: 80px;
+    }
+    &__title{
+        margin-bottom: 30px;
+    }
+    &__text{
+        color: #919191;
+        line-height: 1.3;
+        margin-bottom: 30px;
+    }
+    &__btn{
+        border: 2px solid #2ecc71;
+        padding: 14px 30px;
+        display: inline-block;
+        color: #2ecc71;
+        text-transform: uppercase;
+        font-family: 'Alice', serif;
+        &:hover{
+            background-color: #37452B;
+            color: #fff;
+            border-color: #1F2718;
+        }
+    }
+}
+.portfolio{
+    padding-top: 75px;
+    margin-top: -75px;
+    background-clip: content-box;
+    &__item{
+        text-align: center;
+    }
+    &__title{
+        margin-bottom: 30px;
+    }
+    &__text{
+        color: #919191;
+        font-size: 18px;
+        line-height: 1.2;
+        margin-bottom: 30px;
+    }
+    &__inner{
+        margin-bottom: 60px;
+        text-align: center;
+    }
+    &__column{
+        margin: 0 auto;
+        border-radius: 3px;
+        & img{
+            width: 250px;
+            height: 200px;
+        }
+    }
+    &__text-slider{
+        margin: 0 auto;
+        height: 120px;
+        overflow: auto;
+        max-width: 250px;
+        padding: 20px 20px 10px;
+        font-size: 16px;
+        color: #919191;
+        background-color: #F2F2F1;
+    }
+}
+
+.contacts{
+    background-color: #252e30;
+    height: 400px;
+    &__inner{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 50px;
+    }
+    &__item{
+        padding-left: 200px;
+        font-size: 18px;
+        color: #919191;
+        & a{
+            font-size: 18px;
+            color: #919191;
+        }
+        & span{
+            color: #fff;
+        }
+    }
+    &__title{
+        color: #fff;
+        margin-bottom: 30px;
+    }
+    &__adress{
+        margin-bottom: 15px;
+    }
+    &__email{
+        margin-bottom: 15px;
+    }
+}
+
+.footer{
+    background-color: #191f21;
+    height: 120px;
+    &__inner{
+        text-align: center;
+        padding-top: 20px;
+    }
+    &__title{
+        color: #4b5456;
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+    &__link{
+        fill: #fff;
+        margin: 0 10px;
+        &:hover{
+            fill: #635644;
+        }
+    }
+}
+
+/*Слайдер About*/
+.slick-track{
+    display: flex;
+}
+.slick-list{
+    overflow: hidden;
+}
+.slider__about{
+    position: relative;
+}
+.slider__about .slick-arrow{
+    position: absolute;
+    top: 50%;
+    z-index: 10;
+    font-size: 0;
+    width: 50px;
+    height: 50px;
+    margin-top: -25px;
+    outline: none;
+}
+.slider__about .slick-arrow.slick-prev{
+    left: 0;
+    background: url(../img/left-arrow.svg) 0 0 / 100% no-repeat;
+}
+.slider__about .slick-arrow.slick-next{
+    right: 0;
+    background: url(../img/right-arrow.svg) 0 0  / 100% no-repeat;
+}
+
+.slider__about .slick-dots{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 7%;
+    left: 44%;
+    right: 44%;
+    margin: 0 auto;
+}
+.slider__about .slick-dots li{
+    list-style: none;
+    margin: 0 8px;
+}
+.slider__about .slick-dots button{
+    font-size: 0;
+    width: 13px;
+    height: 13px;
+    background-color: #fff;
+    border-radius: 50%;
+}
+.slider__about .slick-dots li.slick-active button{
+    background-color: transparent;
+    border: 1px solid #fff;
+}
+
+/*Слайдер portfolio*/
+.slider__portfolio{
+    position: relative;
+    padding: 0 60px;
+}
+.slider__portfolio .slick-arrow{
+    position: absolute;
+    top: 40%;
+    z-index: 10;
+    font-size: 0;
+    width: 50px;
+    height: 50px;
+    margin-top: -25px;
+    outline: none;
+}
+.slider__portfolio .slick-arrow.slick-prev{
+    left: 30px;
+    background: url(../img/left-port.svg) 0 0 / 100% no-repeat;
+}
+.slider__portfolio .slick-arrow.slick-next{
+    right: 30px;
+    background: url(../img/right-port.svg) 0 0  / 100% no-repeat;
+}
+.slider__portfolio .slick-arrow.slick-disabled{
+    opacity: 0.2;
+}
+
+.slider__portfolio .slick-dots{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 32%;
+    left: 45%;
+    right: 44%;
+    margin: 0 auto;
+}
+.slider__portfolio .slick-dots li{
+    list-style: none;
+    margin: 0 8px;
+}
+.slider__portfolio .slick-dots button{
+    font-size: 0;
+    width: 11px;
+    height: 11px;
+    background-color: #252E30;
+    border-radius: 50%;
+}
+.slider__portfolio .slick-dots li.slick-active button{
+    background-color: transparent;
+    border: 1px solid #252E30;
+}

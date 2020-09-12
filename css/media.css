@@ -1,0 +1,277 @@
+@media(max-width: 1040px){
+    .about__item{
+        max-width: 400px;
+        margin-right: 60px;
+    }
+    .skills__item{
+        max-width: 600px;
+    }
+    .skills__text{
+        font-size: 16px;
+    }
+    .slider__portfolio{
+        padding: 0 70px;
+    }
+}
+@media(max-width: 950px){
+    .header__title{
+        font-size: 18px;
+    }
+    .contacts__item{
+        padding-left: 90px;
+    }
+    .hobbies__colums{
+       max-width: 230px;
+    }
+    .Hobbies__text{
+        font-size: 14px;
+    }
+    .skills__text{
+        font-size: 14px;
+        margin-bottom: 15px;
+    }
+    .skills__item{
+        max-width: 550px;
+        margin-left: 20px;
+    }
+    .slider__portfolio{
+        padding: 0 70px;
+        margin:  0 60px;
+    }
+    .portfolio__text{
+        max-width: 450px;
+        margin: 0 auto 30px;
+    }
+}
+@media(max-width: 800px){
+    .skills__img{
+        margin-top: 40px;
+    }
+    .slider__portfolio{
+        padding: 0 20px;
+        margin: 0 130px;
+    }
+}
+@media (max-width: 767px){
+    .header__inner{
+        left: 20%;
+    }
+    .header__title{
+        font-size: 16px;
+    }
+    .navbar{
+        margin-bottom: 40px;
+    }
+    .about{
+        margin-bottom: 40px;
+    }
+    .about__inner{
+        display: block;
+        padding-bottom: 40px;
+    }
+    .about__photo{
+        margin: 0 auto;
+    }
+    .about__item{
+        margin: 0 auto;
+    }
+    .about__title{
+        text-align: center;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    .about__text{
+        font-size: 14px;
+        max-height: 240px;
+    }
+    .skills{
+        margin-bottom: 10px;
+    }
+    .skills__inner{
+        display: block;
+    }
+    .skills__item{
+        margin: 0 auto;
+        max-width: 700px;
+    }
+    .skills__text{
+        margin-left: 50px;
+    }
+    .skills__text p:last-child{
+        max-width: 450px;
+    }
+    .skills__title{
+        text-align: center;
+    }
+    .skills__btn{
+        text-align: center;
+    }
+    .resume__inner{
+        margin-bottom: 30px;
+    }
+    .resume__text{
+        padding: 0 15px;
+        margin-bottom: 20px;
+    }
+    .resume__btn{
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+        /*Адаптив меню бургера*/
+    body.lock{
+        overflow: hidden;
+    }
+    .navbar__burger{
+        display: block;
+        position: absolute;
+        width: 30px;
+        height: 20px;
+        z-index: 3;
+        right: 0;
+        top: 15px
+    }
+    .navbar__burger.active:before{
+        transform: rotate(45deg);
+        top: 9px;
+    }
+    .navbar__burger.active:after{
+        transform: rotate(-45deg);
+        bottom: 9px;
+    }
+    .navbar__burger.active span{
+        transform: scale(0);
+    }
+    .navbar{
+
+    }
+    .navbar__body{
+        height: 50px;
+    }
+    .navbar__list{
+        z-index: 1;
+        display: block;
+    }
+    .navbar__list li{
+        margin-bottom: 20px;
+    }
+    .navbar__logo img{
+        height: 60px;
+    }
+    .navbar__burger span{
+        width: 100%;
+        height: 2px;
+        background-color: #fff;
+        right: 0;
+        top: 9px;
+        position: absolute;
+        transition: all 0.3s;
+    }
+    .navbar__burger:after,
+    .navbar__burger:before{
+        content: "";
+        background-color: #fff;
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        right: 0;
+        transition: 0.3s;
+    }
+    .navbar__burger:before{
+        top: 0;
+    }
+    .navbar__burger:after{
+        bottom: 0;
+    }
+    .navbar__menu{
+        position: absolute;
+        top: -3000%;
+        right: 0;
+        width: 190px;
+        height: 330px;
+        background-color: #252E30;
+        padding-top: 70px;
+        transition: 0.4s;
+        overflow: auto;
+        padding-right: 10px;
+        text-align: center;
+        padding-bottom: 10px;
+    }
+    .navbar__menu.active{
+        right: -10px;
+        top: 0;
+    }
+        /*Адаптив меню бургераEND*/
+    .Hobbies{
+        margin-bottom: 20px;
+    }
+    .Hobbies__inner{
+        display: block;
+        text-align: center;
+    }
+    .Hobbies__title{
+        margin-bottom: 15px;
+    }
+    .Hobbies__colums{
+        margin: 0 auto;
+        max-width: 400px;
+        padding-bottom: 40px;
+    }
+    .contacts__title{
+        margin-bottom: 15px;
+    }
+    .contacts__inner{
+        display: block;
+        text-align: center;
+        padding-top: 20px;
+    }
+    .contacts__item{
+        font-size: 14px;
+        padding-left: 0;
+        margin-bottom: 20px;
+    }
+    .title{
+        font-size: 26px;
+    }
+    .contacts__maps iframe{
+        height: 230px;
+        width: 500px;
+    }
+}
+@media(max-width: 686px){
+    .slider__portfolio{
+        padding: 0 60px;
+        margin: 0 60px;
+    }
+    .skills__text{
+        padding-right: 10px;
+        margin-left: 10px;
+    }
+
+@media(max-width: 570px){
+    .contacts__maps iframe{
+        height: 230px;
+        max-width: 250px;
+    }
+    .header__inner{
+        left: 10%;
+        padding: 0 20px;
+    }
+    .header__title{
+        font-size: 14px;
+        line-height: 1.2;
+        margin-bottom: 15px;
+        padding: 5px;
+    }
+    .header__btn{
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+    .footer__title{
+        font-size: 14px;
+        padding: 0 10px;
+    }
+    .slider__portfolio{
+        padding: 0px;
+        margin: 0px;
+    }
+}
